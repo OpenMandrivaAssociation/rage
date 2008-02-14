@@ -5,6 +5,7 @@ Release: 	%mkrel 1
 Source:		%{name}-%{version}.tar.bz2
 License: 	BSD
 Group: 		Video
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL: 		http://www.enlightenment.org/
 BuildRequires:	evas-devel
 BuildRequires:	ecore-devel
