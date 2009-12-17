@@ -21,6 +21,7 @@ Libraries.
 %setup -q
 
 %build
+NOCONFIGURE=yes ./autogen.sh
 %configure2_5x
 %make
 
