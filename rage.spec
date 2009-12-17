@@ -1,7 +1,7 @@
 Summary: 	Enlightened media center
 Name: 		rage
 Version: 	0.3.0.042
-Release: 	%mkrel 3
+Release: 	%mkrel 4
 Source:		%{name}-%{version}.tar.bz2
 License: 	BSD
 Group: 		Video
@@ -13,9 +13,10 @@ BuildRequires:	edje-devel, edje
 BuildRequires:	emotion-devel
 
 %description
-Emprint is a utility for taking screenshots of the entire screen, a specific
-window, or a specific region. It is written with the Enlightenment Foundation
-Libraries.
+This is a media center designed mostly for use on a television hooked up to
+your pc via a remote control. see the key controls at the end to make your
+remote send the right keystrokes - eventually this will be 100% configurable
+via the gui.
 
 %prep
 %setup -q
