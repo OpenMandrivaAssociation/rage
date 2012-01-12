@@ -21,6 +21,7 @@ URL:		http://www.enlightenment.org/
 Source:		%{name}-%{version}.%{svnrev}.tar.xz
 
 BuildRequires:	edje
+BuildRequires:	evas
 BuildRequires:	pkgconfig(ecore)
 BuildRequires:	pkgconfig(edje)
 BuildRequires:	pkgconfig(emotion)
