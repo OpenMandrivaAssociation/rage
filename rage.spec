@@ -9,7 +9,7 @@
 #cd ..; \
 #tar -Jcf rage-$PKG_VERSION.tar.xz rage/ --exclude .svn --exclude .*ignore
 
-%define svnrev	65769
+%define svnrev	71974
 
 Summary: 	Enlightened media center
 Name: 		rage
@@ -18,7 +18,7 @@ Release:	5.%{svnrev}.1
 License:	BSD
 Group:		Video
 URL:		http://www.enlightenment.org/
-Source:		%{name}-%{version}.%{svnrev}.tar.xz
+Source0:	%{name}-%{version}.%{svnrev}.tar.xz
 
 BuildRequires:	edje
 BuildRequires:	evas
@@ -45,11 +45,9 @@ NOCONFIGURE=yes ./autogen.sh
 %make
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 
 %files
 %doc AUTHORS README ChangeLog NEWS TODO
 %{_bindir}/*
 %{_datadir}/%name
-
