@@ -1,24 +1,14 @@
-#Tarball of svn snapshot created as follows...
-#Cut and paste in a shell after removing initial #
+%define git	20140409
 
-#svn co http://svn.enlightenment.org/svn/e/trunk/rage rage; \
-#cd rage; \
-#SVNREV=$(LANGUAGE=C svn info | grep "Last Changed Rev:" | cut -d: -f 2 | sed "s@ @@"); \
-#VERSION=$(cat configure.ac | grep "rage" | grep INIT | sed 's@\[@@g' | sed 's@\]@@g' | sed 's@)@@g' | cut -d, -f 2 | sed "s@ @@"); \
-#PKG_VERSION=$VERSION.$SVNREV; \
-#cd ..; \
-#tar -Jcf rage-$PKG_VERSION.tar.xz rage/ --exclude .svn --exclude .*ignore
-
-%define svnrev	71974
-
+Epoch:	1
 Summary: 	Enlightened media center
 Name: 		rage
-Version:	0.3.0.042
-Release:	5.%{svnrev}.1
+Version:	0.1.0
+Release:	1.%{git}.1
 License:	BSD
 Group:		Video
 URL:		http://www.enlightenment.org/
-Source0:	%{name}-%{version}.%{svnrev}.tar.xz
+Source0:	%{name}-%{git}.tar.xz
 
 BuildRequires:	edje
 BuildRequires:	evas
@@ -26,6 +16,7 @@ BuildRequires:	pkgconfig(ecore)
 BuildRequires:	pkgconfig(edje)
 BuildRequires:	pkgconfig(emotion)
 BuildRequires:	pkgconfig(evas)
+BuildRequires:	pkgconfig(elementary)
 
 %description
 This is a media center designed mostly for use on a television hooked up to
@@ -37,7 +28,7 @@ This is a WORK IN PROGRESS - it is NOT COMPLETE. do not expect everything to
 work and do what you want.
 
 %prep
-%setup -qn %{name}
+%setup -qn %{name}-%{git}
 
 %build
 NOCONFIGURE=yes ./autogen.sh
@@ -51,3 +42,5 @@ NOCONFIGURE=yes ./autogen.sh
 %doc AUTHORS README ChangeLog NEWS TODO
 %{_bindir}/*
 %{_datadir}/%name
+%{_datadir}/applications/*.desktop
+%{_iconsdir}/%name.png
