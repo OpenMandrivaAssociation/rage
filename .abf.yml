@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   rage-0.3.0.042.71974.tar.xz: 5d2c52583e7032c064042aac22a11dc1785ce321
+sources:
+  rage-20140409.tar.xz: 1118409b0e352c5963269b7a6b20660847775560
