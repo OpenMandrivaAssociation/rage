@@ -1,14 +1,15 @@
-%define git	20140409
+%define git	20150504
 
 Epoch:	1
 Summary: 	Enlightened media center
 Name: 		rage
-Version:	0.1.0
+Version:	0.1.4
 Release:	1.%{git}.1
 License:	BSD
 Group:		Video
 URL:		http://www.enlightenment.org/
-Source0:	%{name}-%{git}.tar.xz
+Source0:	%{name}-%{version}.%{git}.tar.gz
+Source100:	%{name}.rpmlintrc
 
 BuildRequires:	edje
 BuildRequires:	evas
@@ -28,7 +29,7 @@ This is a WORK IN PROGRESS - it is NOT COMPLETE. do not expect everything to
 work and do what you want.
 
 %prep
-%setup -qn %{name}-%{git}
+%setup -qn %{name}-%{version}.%{git}
 
 %build
 NOCONFIGURE=yes ./autogen.sh
@@ -44,3 +45,4 @@ NOCONFIGURE=yes ./autogen.sh
 %{_datadir}/%name
 %{_datadir}/applications/*.desktop
 %{_iconsdir}/%name.png
+%{_libdir}/%{name}/*
