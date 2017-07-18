@@ -1,22 +1,24 @@
-%define git	20150504
+#%define git	20150504
+%define efl_version 1.19.1
 
 Epoch:	1
 Summary: 	Enlightened media center
 Name: 		rage
-Version:	0.1.0
-Release:	1.%{git}.1
+Version:	0.2.1
+Release:	1
 License:	BSD
 Group:		Video
 URL:		http://www.enlightenment.org/
-Source0:	%{name}-%{git}.tar.xz
+Source0:	%{name}-%{version}.tar.gz
+Source100:	%{name}.rpmlintrc
 
 BuildRequires:	edje
 BuildRequires:	evas
-BuildRequires:	pkgconfig(ecore)
-BuildRequires:	pkgconfig(edje)
-BuildRequires:	pkgconfig(emotion)
-BuildRequires:	pkgconfig(evas)
-BuildRequires:	pkgconfig(elementary)
+BuildRequires:	pkgconfig(ecore) >= %{efl_version}
+BuildRequires:	pkgconfig(edje) >= %{efl_version}
+BuildRequires:	pkgconfig(emotion) >= %{efl_version}
+BuildRequires:	pkgconfig(evas) => %{efl_version}
+BuildRequires:	pkgconfig(elementary) >= %{efl_version}
 
 %description
 This is a media center designed mostly for use on a television hooked up to
@@ -28,11 +30,11 @@ This is a WORK IN PROGRESS - it is NOT COMPLETE. do not expect everything to
 work and do what you want.
 
 %prep
-%setup -qn %{name}-%{git}
+%setup -qn %{name}-%{version}
 
 %build
-NOCONFIGURE=yes ./autogen.sh
-%configure2_5x
+#NOCONFIGURE=yes ./autogen.sh
+%configure
 %make
 
 %install
@@ -44,3 +46,4 @@ NOCONFIGURE=yes ./autogen.sh
 %{_datadir}/%name
 %{_datadir}/applications/*.desktop
 %{_iconsdir}/%name.png
+%{_libdir}/%{name}/*
