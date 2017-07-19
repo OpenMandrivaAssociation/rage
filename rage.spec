@@ -1,4 +1,3 @@
-#%define git	20150504
 %define efl_version 1.19.1
 
 Epoch:	1
@@ -10,10 +9,8 @@ License:	BSD
 Group:		Video
 URL:		http://www.enlightenment.org/
 Source0:	%{name}-%{version}.tar.gz
-Source100:	%{name}.rpmlintrc
+#Source100:	%{name}.rpmlintrc
 
-BuildRequires:	edje
-BuildRequires:	evas
 BuildRequires:	pkgconfig(ecore) >= %{efl_version}
 BuildRequires:	pkgconfig(edje) >= %{efl_version}
 BuildRequires:	pkgconfig(emotion) >= %{efl_version}
