@@ -1,15 +1,14 @@
-%define efl_version 1.19.1
+%define efl_version 1.21.1
 
 Epoch:	1
 Summary: 	Enlightened media center
 Name: 		rage
-Version:	0.2.1
+Version:	0.3.0
 Release:	1
 License:	BSD
 Group:		Video
 URL:		http://www.enlightenment.org/
-Source0:	%{name}-%{version}.tar.gz
-#Source100:	%{name}.rpmlintrc
+Source0:	%{name}-%{version}.tar.xz
 
 BuildRequires:	pkgconfig(ecore) >= %{efl_version}
 BuildRequires:	pkgconfig(edje) >= %{efl_version}
@@ -28,17 +27,17 @@ work and do what you want.
 
 %prep
 %setup -qn %{name}-%{version}
+%meson
 
 %build
-#NOCONFIGURE=yes ./autogen.sh
-%configure
-%make
+
+%meson_build
 
 %install
-%makeinstall_std
+%meson_install
 
 %files
-%doc AUTHORS README ChangeLog NEWS TODO
+%doc AUTHORS README TODO
 %{_bindir}/*
 %{_datadir}/%name
 %{_datadir}/applications/*.desktop
