@@ -10,6 +10,7 @@ Group:		Video
 URL:		http://www.enlightenment.org/
 Source0:	%{name}-%{version}.tar.xz
 
+BuildRequires:  meson
 BuildRequires:	pkgconfig(ecore) >= %{efl_version}
 BuildRequires:	pkgconfig(edje) >= %{efl_version}
 BuildRequires:	pkgconfig(emotion) >= %{efl_version}
