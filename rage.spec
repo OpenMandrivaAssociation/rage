@@ -42,5 +42,5 @@ work and do what you want.
 %{_bindir}/*
 %{_datadir}/%name
 %{_datadir}/applications/*.desktop
-#{_iconsdir}/%name.png
+%{_iconsdir}/hicolor/*x*/apps/%{name}.png
 %{_libdir}/%{name}/*
