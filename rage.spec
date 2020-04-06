@@ -1,14 +1,14 @@
-%define efl_version 1.21.1
+%define efl_version 1.23.3
 
 Epoch:	1
 Summary: 	Enlightened media center
 Name: 		rage
-Version:	0.3.0
+Version:	0.3.1
 Release:	1
 License:	BSD
 Group:		Video
 URL:		http://www.enlightenment.org/
-Source0:	%{name}-%{version}.tar.xz
+Source0:	https://download.enlightenment.org/rel/apps/rage/%{name}-%{version}.tar.xz
 
 BuildRequires:  meson
 BuildRequires:	pkgconfig(ecore) >= %{efl_version}
