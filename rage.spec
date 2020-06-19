@@ -1,10 +1,10 @@
-%define efl_version 1.23.3
+%define efl_version 1.24.3
 
 Epoch:	1
 Summary: 	Enlightened media center
 Name: 		rage
 Version:	0.3.1
-Release:	1
+Release:	2
 License:	BSD
 Group:		Video
 URL:		http://www.enlightenment.org/
