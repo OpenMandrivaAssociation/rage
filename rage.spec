@@ -1,21 +1,17 @@
-%define efl_version 1.24.3
+%define efl_version 1.26.1
 
 Epoch:	1
 Summary: 	Enlightened media center
 Name: 		rage
-Version:	0.3.1
-Release:	2
+Version:	0.4.0
+Release:	1
 License:	BSD
 Group:		Video
 URL:		http://www.enlightenment.org/
 Source0:	https://download.enlightenment.org/rel/apps/rage/%{name}-%{version}.tar.xz
 
 BuildRequires:  meson
-BuildRequires:	pkgconfig(ecore) >= %{efl_version}
-BuildRequires:	pkgconfig(edje) >= %{efl_version}
-BuildRequires:	pkgconfig(emotion) >= %{efl_version}
-BuildRequires:	pkgconfig(evas) => %{efl_version}
-BuildRequires:	pkgconfig(elementary) >= %{efl_version}
+BuildRequires:	pkgconfig(efl) >= %{efl_version}}
 
 %description
 This is a media center designed mostly for use on a television hooked up to
