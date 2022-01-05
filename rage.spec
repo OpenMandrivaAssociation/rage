@@ -11,6 +11,7 @@ URL:		http://www.enlightenment.org/
 Source0:	https://download.enlightenment.org/rel/apps/rage/%{name}-%{version}.tar.xz
 
 BuildRequires:  meson
+BuildRequires:  efl >= %{efl_version}}
 BuildRequires:	pkgconfig(efl) >= %{efl_version}}
 
 %description
