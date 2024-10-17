@@ -7,7 +7,7 @@ Version:	0.4.0
 Release:	1
 License:	BSD
 Group:		Video
-URL:		http://www.enlightenment.org/
+URL:		https://www.enlightenment.org/
 Source0:	https://download.enlightenment.org/rel/apps/rage/%{name}-%{version}.tar.xz
 
 BuildRequires:  meson
