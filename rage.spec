@@ -4,7 +4,7 @@ Epoch:	1
 Summary: 	Enlightened media center
 Name: 		rage
 Version:	0.4.0
-Release:	1
+Release:	2
 License:	BSD
 Group:		Video
 URL:		https://www.enlightenment.org/
